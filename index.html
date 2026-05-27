@@ -1,90 +1,745 @@
-<svg width="100%" viewBox="0 0 690 530" role="img" xmlns="http://www.w3.org/2000/svg" style="">
-<title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Logótipo Entre Folhas — Raquel Marinho</title>
-<desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Logótipo final da marca Entre Folhas com folhas orgânicas em linha fina, nome da autora e tagline pedagógica</desc>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Entre Folhas — E-books, Kits Físicos e Aulas Online de Atividades Lúdico-Pedagógicas por Raquel Marinho">
+<title>Entre Folhas · Raquel Marinho</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   RESET & TOKENS
+══════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Palette — clean, luminous */
+  --ink:        #2B2420;
+  --ink-60:     rgba(43,36,32,.6);
+  --ink-30:     rgba(43,36,32,.3);
+  --rose:       #C4816F;
+  --rose-lt:    #EDD5CE;
+  --rose-pale:  #FAF4F2;
+  --sage:       #76987F;
+  --sage-lt:    #C9DDD0;
+  --sage-pale:  #EEF5F0;
+  --sage-dark:  #3E6650;
+  --stone:      #F4F0EC;
+  --white:      #FFFFFF;
+  --border:     rgba(196,129,111,.14);
+  --sh-sm:      0 2px 12px rgba(43,36,32,.06);
+  --sh-md:      0 8px 40px rgba(43,36,32,.09);
+  --sh-lg:      0 20px 60px rgba(43,36,32,.12);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'DM Sans',sans-serif;background:var(--stone);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--stone)}
+::-webkit-scrollbar-thumb{background:var(--rose-lt);border-radius:2px}
 
-<defs>
-  
-<mask id="imagine-text-gaps-tj6bm3" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="690" height="530" fill="white"/><rect x="257.09375" y="22" width="165.8125" height="16" fill="black" rx="2"/><rect x="221" y="93" width="106.796875" height="47" fill="black" rx="2"/><rect x="222" y="135" width="124.375" height="47" fill="black" rx="2"/><rect x="224" y="186" width="106.609375" height="15" fill="black" rx="2"/><rect x="334" y="186" width="12.34375" height="15" fill="black" rx="2"/><rect x="378" y="186" width="150.953125" height="15" fill="black" rx="2"/><rect x="221" y="297" width="106.796875" height="47" fill="black" rx="2"/><rect x="222" y="339" width="124.375" height="47" fill="black" rx="2"/><rect x="224" y="390" width="106.609375" height="15" fill="black" rx="2"/><rect x="334" y="390" width="12.34375" height="15" fill="black" rx="2"/><rect x="378" y="390" width="150.953125" height="15" fill="black" rx="2"/><rect x="187.0078125" y="452" width="305.984375" height="16" fill="black" rx="2"/></mask></defs>
+/* ══════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════ */
+.eyebrow{font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.8rem}
+.h2{font-family:'Cormorant',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;letter-spacing:-.02em;color:var(--ink);line-height:1.12}
+.h2 em{font-style:italic;color:var(--rose)}
+.lead{font-size:.93rem;font-weight:300;line-height:1.85;color:var(--ink-60);max-width:480px;margin-top:.9rem}
+.s-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;gap:1rem;flex-wrap:wrap}
+.more{font-size:.78rem;font-weight:500;color:var(--ink-60);border-bottom:1px solid var(--ink-30);padding-bottom:2px;transition:color .2s;white-space:nowrap}
+.more:hover{color:var(--rose)}
+.btn{display:inline-block;padding:.78rem 1.9rem;border-radius:3rem;font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;cursor:pointer;border:none;transition:all .25s;letter-spacing:.01em}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:var(--rose);transform:translateY(-2px);box-shadow:var(--sh-md)}
+.btn-sage{background:var(--sage-dark);color:#fff}.btn-sage:hover{background:var(--rose);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--rose-lt)}.btn-ghost:hover{border-color:var(--rose);color:var(--rose);transform:translateY(-2px)}
+.btn-wh{background:var(--white);color:var(--sage-dark);font-weight:500}.btn-wh:hover{background:var(--rose-lt);transform:translateY(-2px)}
+.tag{display:inline-block;padding:.18rem .6rem;border-radius:1rem;font-size:.63rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
+.tag-rose{background:var(--rose);color:#fff}
+.tag-sage{background:var(--sage-dark);color:#fff}
+.tag-stone{background:rgba(255,255,255,.88);color:var(--ink)}
 
-<!-- Fundo neutro claro -->
-<rect width="680" height="520" fill="#FDFAF8" style="fill:rgb(253, 250, 248);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+/* ══════════════════════════════════════
+   NAV
+══════════════════════════════════════ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:400;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 5%;
+  background:rgba(244,240,236,.94);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s;
+}
+#nav.scrolled{box-shadow:var(--sh-sm)}
+.nav-brand{display:flex;align-items:center}
+.nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none}
+.nav-links a{font-size:.77rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-60);transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--rose)}
+.nav-links .cta{background:var(--sage-dark);color:#fff!important;padding:.44rem 1.2rem;border-radius:2rem;transition:background .2s!important}
+.nav-links .cta:hover{background:var(--rose)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:3px}
+.burger span{width:21px;height:1.6px;background:var(--ink);border-radius:2px;transition:.3s}
 
-<!-- Rótulo topo -->
-<text x="340" y="34" text-anchor="middle" font-family="Arial" font-size="9.5" letter-spacing="0.14em" fill="#BBBBBB" style="fill:rgb(187, 187, 187);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:9.5px;font-weight:400;text-anchor:middle;dominant-baseline:auto">LOGÓTIPO · VERSÃO FINAL</text>
-<line x1="220" y1="44" x2="460" y2="44" stroke="#F0DDD9" stroke-width="0.8" style="fill:rgb(0, 0, 0);stroke:rgb(240, 221, 217);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+#hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;
+  padding:7rem 5% 4.5rem;
+  background:linear-gradient(150deg,var(--rose-pale) 0%,var(--white) 42%,var(--sage-pale) 100%);
+  position:relative;overflow:hidden;
+}
+/* subtle dot texture */
+#hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(196,129,111,.09) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--white);border:1px solid var(--sage-lt);border-radius:2rem;
+  padding:.36rem 1rem;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--sage-dark);margin-bottom:1.8rem;animation:fUp .6s ease both;
+}
+#hero h1{
+  font-family:'Cormorant',serif;
+  font-size:clamp(3.2rem,6vw,5.2rem);
+  line-height:1.05;font-weight:500;letter-spacing:-.025em;color:var(--ink);
+  animation:fUp .7s .08s ease both;
+}
+#hero h1 em{font-style:italic;color:var(--rose)}
+.hero-sub{
+  margin-top:1.4rem;font-size:.95rem;font-weight:300;line-height:1.85;
+  color:var(--ink-60);max-width:450px;animation:fUp .7s .17s ease both;
+}
+.hero-btns{display:flex;gap:.8rem;margin-top:2.2rem;flex-wrap:wrap;animation:fUp .7s .26s ease both}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;animation:fUp .7s .35s ease both}
+.stat-n{font-family:'Cormorant',serif;font-size:2.4rem;font-weight:500;color:var(--ink);line-height:1}
+.stat-l{font-size:.7rem;color:var(--ink-30);margin-top:.2rem;font-weight:300}
 
-<!-- ══════════════════════════════════
-     VERSÃO CLARA — fundo branco
-══════════════════════════════════ -->
-<rect x="40" y="60" width="600" height="180" rx="18" fill="#FFFFFF" stroke="#F0DDD9" stroke-width="1" style="fill:rgb(255, 255, 255);stroke:rgb(240, 221, 217);color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+/* floating cards */
+.hero-vis{position:relative;height:560px;animation:fIn 1s .25s ease both}
+.hc{position:absolute;background:var(--white);border-radius:22px;padding:1.3rem;box-shadow:var(--sh-md);transition:transform .35s}
+.hc:hover{transform:translateY(-8px)!important}
+.hc-a{width:210px;top:5%;left:12%;animation:float1 5.5s ease-in-out infinite}
+.hc-b{width:182px;top:36%;right:1%;animation:float2 6.5s ease-in-out infinite}
+.hc-c{width:192px;bottom:3%;left:1%;animation:float3 5s ease-in-out infinite}
+.hc-cover{width:100%;aspect-ratio:3/4;border-radius:14px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative}
+.cov-a{background:linear-gradient(135deg,#EDD5CE,#C4816F)}
+.cov-b{background:linear-gradient(135deg,#C9DDD0,#76987F)}
+.cov-c{background:linear-gradient(135deg,#E6E0F4,#9A8EC0)}
+.hc-title{font-family:'Cormorant',serif;font-size:.95rem;font-weight:500;color:var(--ink);line-height:1.3;margin-bottom:.22rem}
+.hc-sub{font-size:.68rem;color:var(--ink-60);font-weight:300}
+.hc-price{font-size:.92rem;font-weight:500;color:var(--rose);margin-top:.4rem}
+.hbadge{position:absolute;border-radius:2rem;padding:.32rem .8rem;font-size:.67rem;font-weight:500;white-space:nowrap;color:#fff;box-shadow:var(--sh-sm)}
+.hb1{top:1%;right:13%;background:var(--sage-dark)}
+.hb2{bottom:15%;right:0%;background:var(--rose)}
 
-<!-- Folhas orgânicas -->
-<g transform="translate(108, 155)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <!-- Folha 1 — verde sálvia -->
-  <path d="M0,0 C8,-30 36,-46 52,-32 C66,-18 60,10 46,22 C32,34 6,30 0,0 Z" fill="none" stroke="#7B9E8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="fill:none;stroke:rgb(123, 158, 138);color:rgb(0, 0, 0);stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <!-- Nervura folha 1 -->
-  <path d="M0,0 C20,-4 44,2 52,-32" fill="none" stroke="#7B9E8A" stroke-width="0.7" stroke-linecap="round" opacity="0.5" style="fill:none;stroke:rgb(123, 158, 138);color:rgb(0, 0, 0);stroke-width:0.7px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <!-- Nervuras laterais -->
-  <path d="M10,-4 C20,-8 38,-12 46,-20" fill="none" stroke="#7B9E8A" stroke-width="0.5" stroke-linecap="round" opacity="0.35" style="fill:none;stroke:rgb(123, 158, 138);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M16,10 C26,6 40,4 48,-6" fill="none" stroke="#7B9E8A" stroke-width="0.5" stroke-linecap="round" opacity="0.35" style="fill:none;stroke:rgb(123, 158, 138);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+/* ══════════════════════════════════════
+   MARQUEE
+══════════════════════════════════════ */
+.mbar{background:var(--ink);overflow:hidden;padding:.78rem 0}
+.minner{display:flex;gap:2.5rem;white-space:nowrap;animation:mq 34s linear infinite}
+.mi{font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(237,213,206,.55);display:flex;align-items:center;gap:.8rem}
+.md{color:var(--sage);font-size:.8rem}
 
-  <!-- Folha 2 — rosa velho, sobreposta -->
-  <path d="M18,-10 C26,-40 54,-56 70,-40 C84,-24 78,4 62,18 C48,30 20,26 18,-10 Z" fill="none" stroke="#C8887B" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" style="fill:none;stroke:rgb(200, 136, 123);color:rgb(0, 0, 0);stroke-width:1.3px;stroke-linecap:round;stroke-linejoin:round;opacity:0.8;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <!-- Nervura folha 2 -->
-  <path d="M18,-10 C38,-16 64,-8 70,-40" fill="none" stroke="#C8887B" stroke-width="0.65" stroke-linecap="round" opacity="0.4" style="fill:none;stroke:rgb(200, 136, 123);color:rgb(0, 0, 0);stroke-width:0.65px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-</g>
+/* ══════════════════════════════════════
+   SECTIONS WRAPPER
+══════════════════════════════════════ */
+section{padding:5.5rem 5%}
 
-<!-- Bloco tipográfico -->
-<!-- "Entre" em itálico georgiano -->
-<text x="226" y="130" font-family="Georgia" font-style="italic" font-size="38" fill="#3A3A3A" letter-spacing="0.01em" style="fill:rgb(58, 58, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia;font-size:38px;font-weight:400;font-style:italic;text-anchor:start;dominant-baseline:auto">Entre</text>
-<!-- "Folhas" em georgiano regular, um pouco maior -->
-<text x="226" y="172" font-family="Georgia" font-size="38" fill="#3A3A3A" letter-spacing="0.02em" font-weight="400" style="fill:rgb(58, 58, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia;font-size:38px;font-weight:400;text-anchor:start;dominant-baseline:auto">Folhas</text>
+/* ══════════════════════════════════════
+   CATEGORIES
+══════════════════════════════════════ */
+#cats{background:var(--white)}
+.cats-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.cat-c{background:var(--stone);border-radius:20px;padding:1.8rem 1.3rem;border:1.5px solid transparent;transition:all .3s;cursor:pointer;display:block;text-decoration:none}
+.cat-c:hover{border-color:var(--rose-lt);box-shadow:var(--sh-md);transform:translateY(-3px)}
+.cat-ico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.45rem;margin-bottom:1rem}
+.cico-a{background:var(--rose-lt)}.cico-b{background:var(--sage-lt)}.cico-c{background:#E8E2F4}.cico-d{background:#F2EBD8}
+.cat-name{font-family:'Cormorant',serif;font-size:1.1rem;font-weight:500;color:var(--ink);margin-bottom:.4rem}
+.cat-desc{font-size:.77rem;color:var(--ink-60);line-height:1.65;font-weight:300}
+.cat-cnt{font-size:.68rem;font-weight:500;color:var(--sage-dark);margin-top:.85rem;letter-spacing:.05em}
 
-<!-- Linha separadora fina -->
-<line x1="226" y1="182" x2="560" y2="182" stroke="#C8887B" stroke-width="0.7" opacity="0.55" mask="url(#imagine-text-gaps-tj6bm3)" style="fill:rgb(0, 0, 0);stroke:rgb(200, 136, 123);color:rgb(0, 0, 0);stroke-width:0.7px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.55;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+/* ══════════════════════════════════════
+   E-BOOKS
+══════════════════════════════════════ */
+#ebooks{background:var(--stone)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.book-c{background:var(--white);border-radius:20px;overflow:hidden;cursor:pointer;transition:all .3s}
+.book-c:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
+.book-cover{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+.bk1{background:linear-gradient(135deg,var(--rose-lt),var(--rose))}
+.bk2{background:linear-gradient(135deg,var(--sage-lt),var(--sage))}
+.bk3{background:linear-gradient(135deg,#E0D8F0,#9A8EC0)}
+.bk4{background:linear-gradient(135deg,#F0E8D8,#C0944A)}
+.bk5{background:linear-gradient(135deg,#D0EAE0,var(--sage-dark))}
+.bk6{background:linear-gradient(135deg,#ECD8D4,var(--rose))}
+.book-info{padding:1.2rem}
+.book-cat{font-size:.65rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-30);margin-bottom:.4rem}
+.book-name{font-family:'Cormorant',serif;font-size:1.05rem;font-weight:500;color:var(--ink);line-height:1.3;margin-bottom:.35rem}
+.book-desc{font-size:.76rem;color:var(--ink-60);line-height:1.55;font-weight:300}
+.book-foot{display:flex;align-items:center;justify-content:space-between;margin-top:.9rem}
+.stars{color:var(--rose);letter-spacing:-2px;font-size:.82rem}
+.rating{font-size:.68rem;color:var(--ink-30);margin-left:.2rem}
+.price{font-size:.96rem;font-weight:500;color:var(--ink)}
 
-<!-- "Raquel Marinho" em caixa-baixa espacejada -->
-<text x="228" y="197" font-family="Arial" font-size="10" fill="#7A7A7A" letter-spacing="0.2em" font-weight="400" style="fill:rgb(122, 122, 122);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">Raquel Marinho</text>
+/* ══════════════════════════════════════
+   KITS FÍSICOS
+══════════════════════════════════════ */
+#kits{background:var(--white)}
+.kits-feat{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:center;margin-top:3rem}
+/* kit visual box */
+.kit-box-wrap{position:relative}
+.kit-box{
+  background:linear-gradient(145deg,var(--rose-pale),var(--sage-pale));
+  border-radius:28px;padding:3.5rem 2rem;text-align:center;font-size:5rem;
+  border:1.5px solid var(--rose-lt);position:relative;overflow:hidden;
+}
+.kit-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(118,152,127,.08) 0%,transparent 70%)}
+.kit-float{position:absolute;background:var(--white);border-radius:14px;padding:.85rem 1.1rem;box-shadow:var(--sh-md);font-size:.78rem;font-weight:500}
+.kf1{bottom:-1rem;left:-1.5rem;color:var(--sage-dark)}
+.kf2{top:-1rem;right:-1.5rem;color:var(--rose)}
+.kf-ico{font-size:1.1rem;margin-right:.35rem}
+/* kit includes */
+.kit-includes{margin-top:2rem}
+.ki{display:flex;align-items:flex-start;gap:.9rem;padding:.9rem 0;border-bottom:1px solid var(--stone)}
+.ki:last-child{border:none}
+.ki-ico{width:40px;height:40px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.ki-s{background:var(--sage-lt)}.ki-r{background:var(--rose-lt)}
+.ki-tx h4{font-size:.87rem;font-weight:500;color:var(--ink);margin-bottom:.18rem}
+.ki-tx p{font-size:.76rem;color:var(--ink-60);font-weight:300;line-height:1.6}
+/* kit cards */
+.kits-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3rem}
+.kit-c{background:var(--stone);border-radius:20px;padding:1.6rem;border:1.5px solid var(--border);transition:all .3s;cursor:pointer}
+.kit-c:hover{border-color:var(--rose);box-shadow:var(--sh-md);transform:translateY(-3px)}
+.kit-em{font-size:2.2rem;margin-bottom:.85rem}
+.kit-age{font-size:.68rem;font-weight:500;color:var(--sage-dark);letter-spacing:.07em;text-transform:uppercase;margin-bottom:.35rem}
+.kit-name{font-family:'Cormorant',serif;font-size:1.1rem;font-weight:500;color:var(--ink);margin-bottom:.4rem}
+.kit-d{font-size:.76rem;color:var(--ink-60);line-height:1.58;font-weight:300}
+.kit-p{margin-top:.95rem;font-size:1rem;font-weight:500;color:var(--rose)}
+.kit-gift-tag{display:inline-block;margin-top:.4rem;font-size:.65rem;font-weight:500;background:var(--rose-lt);color:var(--rose);padding:.18rem .6rem;border-radius:1rem}
 
-<!-- Separador central -->
-<text x="338" y="197" font-family="Arial" font-size="10" fill="#C8887B" letter-spacing="0.1em" style="fill:rgb(200, 136, 123);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">  ·  </text>
+/* ══════════════════════════════════════
+   AULAS ONLINE
+══════════════════════════════════════ */
+#aulas{background:var(--sage-pale)}
+.aulas-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
+.aula-c{background:var(--white);border-radius:20px;overflow:hidden;transition:all .3s;cursor:pointer}
+.aula-c:hover{transform:translateY(-5px);box-shadow:var(--sh-md)}
+.aula-img{width:100%;height:148px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative}
+.ai1{background:linear-gradient(135deg,#EDD5CE,#E4AFA2)}
+.ai2{background:linear-gradient(135deg,var(--sage-lt),#A8CBBA)}
+.ai3{background:linear-gradient(135deg,#F0E8D4,#DCC490)}
+.ai4{background:linear-gradient(135deg,#E4E0F0,#B8B0D8)}
+.ai5{background:linear-gradient(135deg,#D0EAE0,#90C8B0)}
+.ai6{background:linear-gradient(135deg,var(--rose-lt),var(--sage-lt))}
+.aula-info{padding:1.2rem}
+.aula-mode{font-size:.66rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:.38rem}
+.aula-name{font-family:'Cormorant',serif;font-size:1.05rem;font-weight:500;color:var(--ink);line-height:1.3;margin-bottom:.33rem}
+.aula-desc{font-size:.75rem;color:var(--ink-60);line-height:1.55;font-weight:300}
+.aula-foot{display:flex;align-items:center;justify-content:space-between;margin-top:.85rem}
+.aula-ses{font-size:.7rem;color:var(--ink-60)}
+.aula-p{font-size:.95rem;font-weight:500;color:var(--ink)}
 
-<!-- "Atividades Pedagógicas" -->
-<text x="383" y="197" font-family="Arial" font-size="10" fill="#7B9E8A" letter-spacing="0.16em" font-weight="400" style="fill:rgb(123, 158, 138);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">Atividades Pedagógicas</text>
+/* ══════════════════════════════════════
+   PRESENTES
+══════════════════════════════════════ */
+#presentes{background:var(--stone)}
+.gifts-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.gift-c{background:var(--white);border-radius:20px;padding:2rem 1.3rem;text-align:center;transition:all .3s;cursor:pointer;border:1.5px solid transparent}
+.gift-c:hover{border-color:var(--rose-lt);box-shadow:var(--sh-md);transform:translateY(-4px)}
+.gift-ico{font-size:2.4rem;margin-bottom:.9rem}
+.gift-occ{font-family:'Cormorant',serif;font-size:1.1rem;font-weight:500;color:var(--ink);margin-bottom:.4rem}
+.gift-d{font-size:.76rem;color:var(--ink-60);line-height:1.6;font-weight:300}
+.gift-cta{margin-top:1.1rem;font-size:.76rem;font-weight:500;color:var(--rose)}
 
+/* ══════════════════════════════════════
+   QUEM SOU
+══════════════════════════════════════ */
+#quem{background:var(--white)}
+.quem-g{display:grid;grid-template-columns:1fr 1.15fr;gap:5.5rem;align-items:center;margin-top:3rem}
+.quem-ph{position:relative}
+.quem-img{
+  border-radius:32px;overflow:hidden;
+  background:linear-gradient(145deg,var(--rose-lt) 0%,var(--sage-lt) 100%);
+  aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-size:7rem;
+}
+.quem-badge{
+  position:absolute;bottom:-1.5rem;right:-1.5rem;
+  background:var(--white);border-radius:18px;padding:1.1rem 1.4rem;
+  box-shadow:var(--sh-md);border:1.5px solid var(--rose-lt);
+}
+.quem-badge p{font-size:.82rem;font-weight:500;color:var(--ink)}
+.quem-badge span{font-size:.68rem;color:var(--ink-60);font-weight:300}
+.quem-tx h2{font-family:'Cormorant',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:500;letter-spacing:-.02em;color:var(--ink);line-height:1.12;margin-bottom:1.2rem}
+.quem-tx h2 em{font-style:italic;color:var(--rose)}
+.quem-p{font-size:.9rem;color:var(--ink-60);line-height:1.9;font-weight:300;margin-bottom:.9rem}
+.quem-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.chip{background:var(--stone);border:1.5px solid var(--sage-lt);border-radius:2rem;padding:.36rem 1rem;font-size:.76rem;font-weight:500;color:var(--sage-dark)}
+.quem-tx .btns{margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap}
 
-<!-- ══════════════════════════════════
-     VERSÃO ESCURA — fundo carvão
-══════════════════════════════════ -->
-<rect x="40" y="264" width="600" height="180" rx="18" fill="#2C2C2A" style="fill:rgb(44, 44, 42);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+/* ══════════════════════════════════════
+   BLOG / COMUNIDADE
+══════════════════════════════════════ */
+#blog{background:var(--stone)}
+.blog-g{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:1.1rem;margin-top:2.5rem}
+.blog-c{border-radius:20px;overflow:hidden;background:var(--white);cursor:pointer;transition:all .3s}
+.blog-c:hover{box-shadow:var(--sh-md);transform:translateY(-4px)}
+.blog-img-wrap{width:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--rose-lt),var(--sage-lt));font-size:3rem}
+.blog-c:first-child .blog-img-wrap{height:220px}
+.blog-c:not(:first-child) .blog-img-wrap{height:148px}
+.blog-info{padding:1.2rem}
+.blog-tag{font-size:.65rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--rose);margin-bottom:.38rem}
+.blog-title{font-family:'Cormorant',serif;font-size:1rem;font-weight:500;color:var(--ink);line-height:1.35;margin-bottom:.35rem}
+.blog-exc{font-size:.75rem;color:var(--ink-60);line-height:1.6;font-weight:300}
+.blog-meta{display:flex;align-items:center;gap:.5rem;margin-top:.75rem;font-size:.68rem;color:var(--ink-30)}
+.bav{width:22px;height:22px;border-radius:50%;background:var(--rose-lt);display:flex;align-items:center;justify-content:center;font-size:.72rem}
+/* community banner */
+.com-banner{
+  margin-top:2rem;background:linear-gradient(135deg,var(--sage-dark),var(--sage));
+  border-radius:22px;padding:2.5rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;
+}
+.com-tx h3{font-family:'Cormorant',serif;font-size:1.7rem;font-weight:500;color:#fff;margin-bottom:.4rem}
+.com-tx p{font-size:.84rem;color:rgba(255,255,255,.72);font-weight:300;line-height:1.65;max-width:480px}
 
-<g transform="translate(108, 359)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <path d="M0,0 C8,-30 36,-46 52,-32 C66,-18 60,10 46,22 C32,34 6,30 0,0 Z" fill="none" stroke="#A8C8B4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="fill:none;stroke:rgb(168, 200, 180);color:rgb(0, 0, 0);stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M0,0 C20,-4 44,2 52,-32" fill="none" stroke="#A8C8B4" stroke-width="0.7" stroke-linecap="round" opacity="0.5" style="fill:none;stroke:rgb(168, 200, 180);color:rgb(0, 0, 0);stroke-width:0.7px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M10,-4 C20,-8 38,-12 46,-20" fill="none" stroke="#A8C8B4" stroke-width="0.5" stroke-linecap="round" opacity="0.35" style="fill:none;stroke:rgb(168, 200, 180);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M16,10 C26,6 40,4 48,-6" fill="none" stroke="#A8C8B4" stroke-width="0.5" stroke-linecap="round" opacity="0.35" style="fill:none;stroke:rgb(168, 200, 180);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M18,-10 C26,-40 54,-56 70,-40 C84,-24 78,4 62,18 C48,30 20,26 18,-10 Z" fill="none" stroke="#E8B0A4" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" style="fill:none;stroke:rgb(232, 176, 164);color:rgb(0, 0, 0);stroke-width:1.3px;stroke-linecap:round;stroke-linejoin:round;opacity:0.85;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M18,-10 C38,-16 64,-8 70,-40" fill="none" stroke="#E8B0A4" stroke-width="0.65" stroke-linecap="round" opacity="0.45" style="fill:none;stroke:rgb(232, 176, 164);color:rgb(0, 0, 0);stroke-width:0.65px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.45;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-</g>
+/* ══════════════════════════════════════
+   REVIEWS
+══════════════════════════════════════ */
+#reviews{background:var(--white)}
+.rev-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.5rem}
+.rev-c{background:var(--stone);border-radius:18px;padding:1.8rem;border:1.5px solid var(--border)}
+.r-stars{color:var(--rose);font-size:.88rem;margin-bottom:.75rem;letter-spacing:-1px}
+.r-tx{font-size:.86rem;color:var(--ink-60);line-height:1.82;font-weight:300;font-style:italic;margin-bottom:1.2rem}
+.r-au{display:flex;align-items:center;gap:.7rem}
+.r-av{width:36px;height:36px;border-radius:50%;background:var(--rose-lt);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.r-nm{font-size:.82rem;font-weight:500;color:var(--ink)}
+.r-rl{font-size:.68rem;color:var(--ink-30);font-weight:300}
 
-<text x="226" y="334" font-family="Georgia" font-style="italic" font-size="38" fill="#F5F0EC" letter-spacing="0.01em" style="fill:rgb(245, 240, 236);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia;font-size:38px;font-weight:400;font-style:italic;text-anchor:start;dominant-baseline:auto">Entre</text>
-<text x="226" y="376" font-family="Georgia" font-size="38" fill="#F5F0EC" letter-spacing="0.02em" style="fill:rgb(245, 240, 236);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia;font-size:38px;font-weight:400;text-anchor:start;dominant-baseline:auto">Folhas</text>
-<line x1="226" y1="386" x2="560" y2="386" stroke="#E8B0A4" stroke-width="0.7" opacity="0.5" mask="url(#imagine-text-gaps-tj6bm3)" style="fill:rgb(0, 0, 0);stroke:rgb(232, 176, 164);color:rgb(0, 0, 0);stroke-width:0.7px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-<text x="228" y="401" font-family="Arial" font-size="10" fill="#B0B0A8" letter-spacing="0.2em" style="fill:rgb(176, 176, 168);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">Raquel Marinho</text>
-<text x="338" y="401" font-family="Arial" font-size="10" fill="#E8B0A4" letter-spacing="0.1em" style="fill:rgb(232, 176, 164);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">  ·  </text>
-<text x="383" y="401" font-family="Arial" font-size="10" fill="#A8C8B4" letter-spacing="0.16em" style="fill:rgb(168, 200, 180);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">Atividades Pedagógicas</text>
+/* ══════════════════════════════════════
+   NEWSLETTER
+══════════════════════════════════════ */
+#newsletter{
+  background:linear-gradient(135deg,var(--rose-lt) 0%,var(--sage-lt) 100%);
+  padding:5rem 5%;text-align:center;
+}
+#newsletter .h2{max-width:580px;margin:0 auto 1rem}
+.nl-sub{font-size:.9rem;color:var(--ink-60);font-weight:300;max-width:420px;margin:.8rem auto 2.2rem;line-height:1.8}
+.nl-form{display:flex;gap:.7rem;max-width:420px;margin:0 auto}
+.nl-in{flex:1;padding:.82rem 1.2rem;border-radius:2.5rem;border:1.5px solid var(--rose-lt);background:var(--white);font-family:'DM Sans',sans-serif;font-size:.86rem;color:var(--ink);outline:none;transition:border-color .2s}
+.nl-in:focus{border-color:var(--sage)}.nl-in::placeholder{color:var(--ink-30)}
+.nl-btn{background:var(--sage-dark);color:#fff;padding:.82rem 1.5rem;border-radius:2.5rem;border:none;font-family:'DM Sans',sans-serif;font-size:.86rem;font-weight:500;cursor:pointer;white-space:nowrap;transition:all .25s}
+.nl-btn:hover{background:var(--rose);transform:translateY(-2px)}
 
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
+.ft-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.ft-about{font-size:.8rem;color:rgba(255,255,255,.4);line-height:1.8;font-weight:300;max-width:230px;margin-top:.7rem}
+.ft-col h4{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(237,213,206,.5);margin-bottom:1.1rem}
+.ft-col ul{list-style:none}
+.ft-col ul li{margin-bottom:.6rem}
+.ft-col ul li a{font-size:.8rem;color:rgba(255,255,255,.42);font-weight:300;transition:color .2s}
+.ft-col ul li a:hover{color:var(--rose)}
+.ft-domain{font-size:.72rem;color:rgba(255,255,255,.2);margin-top:.5rem;font-weight:300;letter-spacing:.04em}
+.ft-bot{border-top:1px solid rgba(255,255,255,.07);padding-top:1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.ft-bot p{font-size:.72rem;color:rgba(255,255,255,.28);font-weight:300}
 
-<!-- ══════════════════════════════════
-     VERSÃO SÓ ÍCONE — usos pequenos
-══════════════════════════════════ -->
-<text x="340" y="464" text-anchor="middle" font-family="Arial" font-size="9" letter-spacing="0.12em" fill="#BBBBBB" style="fill:rgb(187, 187, 187);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Arial;font-size:9px;font-weight:400;text-anchor:middle;dominant-baseline:auto">ÍCONE ISOLADO · uso em favicon, redes sociais, carimbos</text>
+/* ══════════════════════════════════════
+   LOGO SVG (inline, used in nav & footer)
+══════════════════════════════════════ */
+.logo-light text,.logo-light line{fill:var(--ink)}
+.logo-dark text,.logo-dark line{fill:#fff}
 
-<!-- Ícone pequeno centrado -->
-<g transform="translate(298, 498)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
-  <path d="M0,0 C6,-22 28,-34 40,-24 C50,-14 46,8 36,16 C24,26 4,22 0,0 Z" fill="none" stroke="#7B9E8A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="fill:none;stroke:rgb(123, 158, 138);color:rgb(0, 0, 0);stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M0,0 C16,-3 34,2 40,-24" fill="none" stroke="#7B9E8A" stroke-width="0.8" stroke-linecap="round" opacity="0.5" style="fill:none;stroke:rgb(123, 158, 138);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-  <path d="M14,-8 C20,-30 42,-42 54,-30 C64,-18 60,-2 48,10 C38,20 16,18 14,-8 Z" fill="none" stroke="#C8887B" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.8" style="fill:none;stroke:rgb(200, 136, 123);color:rgb(0, 0, 0);stroke-width:1.3px;stroke-linecap:round;stroke-linejoin:round;opacity:0.8;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
-</g>
+/* ══════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════ */
+@keyframes fUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fIn{from{opacity:0}to{opacity:1}}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes float1{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-10px)}}
+@keyframes float2{0%,100%{transform:rotate(4deg) translateY(-5px)}50%{transform:rotate(4deg) translateY(6px)}}
+@keyframes float3{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-8px)}}
 
-</svg>
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:1020px){
+  #hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:6rem}
+  .hero-vis{display:none}
+  .hero-stats,.hero-btns{justify-content:center}
+  .hero-sub{margin:1.3rem auto 0}
+  .cats-g,.gifts-g{grid-template-columns:repeat(2,1fr)}
+  .grid-3,.aulas-g,.rev-g{grid-template-columns:repeat(2,1fr)}
+  .kits-feat,.quem-g{grid-template-columns:1fr}
+  .kits-g{grid-template-columns:repeat(2,1fr)}
+  .blog-g{grid-template-columns:1fr}
+  .ft-g{grid-template-columns:1fr 1fr}
+  .nl-form{flex-direction:column}
+  .burger{display:flex}
+  .nav-links{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:flex-start;
+    background:rgba(244,240,236,.98);padding:1.5rem 5%;
+    border-top:1px solid var(--border);gap:1rem;
+    box-shadow:0 8px 28px rgba(43,36,32,.08);
+  }
+  .nav-links.open{display:flex}
+}
+@media(max-width:600px){
+  .cats-g,.grid-3,.aulas-g,.gifts-g,.kits-g,.rev-g{grid-template-columns:1fr}
+  section{padding:4rem 5%}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav id="nav">
+  <a href="#hero" class="nav-brand">
+    <!-- LOGÓTIPO SVG INLINE — VERSÃO CLARA -->
+    <svg width="190" height="52" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Folhas orgânicas -->
+      <g transform="translate(8,36)">
+        <!-- Folha 1 — verde -->
+        <path d="M0,0 C6,-20 24,-30 34,-22 C44,-14 40,8 30,16 C20,24 2,20 0,0Z"
+              fill="none" stroke="#76987F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M0,0 C14,-3 28,2 34,-22"
+              fill="none" stroke="#76987F" stroke-width="0.7" stroke-linecap="round" opacity="0.5"/>
+        <path d="M7,-2 C14,-6 24,-10 29,-16"
+              fill="none" stroke="#76987F" stroke-width="0.5" stroke-linecap="round" opacity="0.35"/>
+        <path d="M10,8 C17,4 24,2 31,-4"
+              fill="none" stroke="#76987F" stroke-width="0.5" stroke-linecap="round" opacity="0.35"/>
+        <!-- Folha 2 — rosa, sobreposta -->
+        <path d="M12,-7 C18,-27 38,-38 48,-28 C58,-18 54,2 42,12 C32,21 13,18 12,-7Z"
+              fill="none" stroke="#C4816F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.82"/>
+        <path d="M12,-7 C26,-12 44,-6 48,-28"
+              fill="none" stroke="#C4816F" stroke-width="0.65" stroke-linecap="round" opacity="0.42"/>
+      </g>
+      <!-- "Entre" itálico -->
+      <text x="65" y="24" font-family="Cormorant, Georgia, serif" font-size="20" font-style="italic" font-weight="400" fill="#2B2420" letter-spacing="0.01em">Entre</text>
+      <!-- "Folhas" roman -->
+      <text x="65" y="45" font-family="Cormorant, Georgia, serif" font-size="20" font-weight="400" fill="#2B2420" letter-spacing="0.03em">Folhas</text>
+      <!-- Linha fina -->
+      <line x1="65" y1="49" x2="200" y2="49" stroke="#C4816F" stroke-width="0.6" opacity="0.5"/>
+      <!-- Raquel Marinho · Atividades Pedagógicas -->
+      <text x="66" y="58" font-family="DM Sans, sans-serif" font-size="7" font-weight="400" fill="#76987F" letter-spacing="0.17em">Raquel Marinho  ·  Atividades Pedagógicas</text>
+    </svg>
+  </a>
+
+  <ul class="nav-links" id="menu">
+    <li><a href="#ebooks">E-books</a></li>
+    <li><a href="#kits">Kits Físicos</a></li>
+    <li><a href="#aulas">Aulas Online</a></li>
+    <li><a href="#quem">Quem Sou</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#newsletter" class="cta">Loja</a></li>
+  </ul>
+  <div class="burger" id="burger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div>
+    <div class="hero-pill">🌿 Atividades lúdico-pedagógicas</div>
+    <h1>Aprender,<br>criar e <em>crescer</em><br>com amor.</h1>
+    <p class="hero-sub">E-books, kits físicos enviados à sua morada e aulas online pensados para famílias, educadores e todos os que querem tornar cada momento de aprendizagem verdadeiramente especial.</p>
+    <div class="hero-btns">
+      <a href="#kits" class="btn btn-ink">Explorar Kits</a>
+      <a href="#aulas" class="btn btn-ghost">Ver Aulas Online</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-n">+120</div><div class="stat-l">Atividades</div></div>
+      <div><div class="stat-n">+5k</div><div class="stat-l">Famílias felizes</div></div>
+      <div><div class="stat-n">100%</div><div class="stat-l">Feito com amor</div></div>
+    </div>
+  </div>
+  <div class="hero-vis">
+    <div class="hc hc-a">
+      <div class="hc-cover cov-a">🎨</div>
+      <div class="hc-title">Kit Expressão Plástica</div>
+      <div class="hc-sub">3–6 anos · Kit Físico</div>
+      <div class="hc-price">18,90 €</div>
+    </div>
+    <div class="hc hc-b">
+      <div class="hc-cover cov-b">🍪</div>
+      <div class="hc-title">Culinária em Família</div>
+      <div class="hc-sub">Aula Online · Pack 4 aulas</div>
+      <div class="hc-price">29,90 €</div>
+    </div>
+    <div class="hc hc-c">
+      <div class="hc-cover cov-c">🧩</div>
+      <div class="hc-title">Memória Ativa Seniores</div>
+      <div class="hc-sub">E-book · PDF</div>
+      <div class="hc-price">5,90 €</div>
+    </div>
+    <div class="hbadge hb1">⭐ Mais vendido</div>
+    <div class="hbadge hb2">🎁 Ideal para oferecer</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mbar">
+  <div class="minner">
+    <span class="mi">E-books pedagógicos <span class="md">✦</span></span>
+    <span class="mi">Kits físicos com entrega em casa <span class="md">✦</span></span>
+    <span class="mi">Aulas online ao vivo <span class="md">✦</span></span>
+    <span class="mi">Workshops pontuais <span class="md">✦</span></span>
+    <span class="mi">Presentes pedagógicos <span class="md">✦</span></span>
+    <span class="mi">www.entrefolhas.pt <span class="md">✦</span></span>
+    <span class="mi">E-books pedagógicos <span class="md">✦</span></span>
+    <span class="mi">Kits físicos com entrega em casa <span class="md">✦</span></span>
+    <span class="mi">Aulas online ao vivo <span class="md">✦</span></span>
+    <span class="mi">Workshops pontuais <span class="md">✦</span></span>
+    <span class="mi">Presentes pedagógicos <span class="md">✦</span></span>
+    <span class="mi">www.entrefolhas.pt <span class="md">✦</span></span>
+  </div>
+</div>
+
+<!-- ══════════════ CATEGORIAS ══════════════ -->
+<section id="cats">
+  <div class="eyebrow">Para todos os públicos</div>
+  <div class="h2">Um mundo de atividades<br>para <em>cada momento</em></div>
+  <div class="cats-g">
+    <div class="cat-c"><div class="cat-ico cico-a">🧒</div><div class="cat-name">Crianças</div><div class="cat-desc">Do berçário ao 1.º ciclo — atividades estimulantes por faixa etária, ricas em cor e criatividade.</div><div class="cat-cnt">48 atividades disponíveis</div></div>
+    <div class="cat-c"><div class="cat-ico cico-b">👨‍👩‍👧</div><div class="cat-name">Família</div><div class="cat-desc">Momentos de qualidade para fazer juntos — memórias que ficam para toda a vida.</div><div class="cat-cnt">32 atividades disponíveis</div></div>
+    <div class="cat-c"><div class="cat-ico cico-c">👴</div><div class="cat-name">Seniores</div><div class="cat-desc">Estimulação cognitiva, motricidade e bem-estar para a melhor geração — com carinho.</div><div class="cat-cnt">24 atividades disponíveis</div></div>
+    <div class="cat-c"><div class="cat-ico cico-d">🎓</div><div class="cat-name">Profissionais</div><div class="cat-desc">Recursos prontos para educadores, psicólogos, assistentes sociais e animadores.</div><div class="cat-cnt">19 atividades disponíveis</div></div>
+  </div>
+</section>
+
+<!-- ══════════════ E-BOOKS ══════════════ -->
+<section id="ebooks">
+  <div class="s-row">
+    <div><div class="eyebrow">Download imediato em PDF</div><div class="h2">E-books <em>pedagógicos</em></div></div>
+    <a href="#" class="more">Ver todos os e-books →</a>
+  </div>
+  <div class="grid-3">
+    <div class="book-c"><div class="book-cover bk1">🎨<span class="tag tag-rose" style="position:absolute;top:.8rem;right:.8rem">Best-seller</span></div><div class="book-info"><div class="book-cat">Crianças · 3–6 anos</div><div class="book-name">Cores, Formas e Muito Mais!</div><div class="book-desc">40 fichas com pinturas, recortes e colagens para estimulação sensorial e criativa dos mais pequenos.</div><div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">4.9 (127)</span></div><div class="price">4,90 €</div></div></div></div>
+    <div class="book-c"><div class="book-cover bk2">🌊<span class="tag tag-sage" style="position:absolute;top:.8rem;right:.8rem">Novo</span></div><div class="book-info"><div class="book-cat">Família · Todas as idades</div><div class="book-name">Aventuras em Família</div><div class="book-desc">30 atividades para fazer juntos em casa ou ao ar livre, com materiais simples do quotidiano.</div><div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">5.0 (43)</span></div><div class="price">6,90 €</div></div></div></div>
+    <div class="book-c"><div class="book-cover bk3">🌿</div><div class="book-info"><div class="book-cat">Seniores · 65+</div><div class="book-name">Memória Viva</div><div class="book-desc">Exercícios de estimulação cognitiva suaves e amorosos para trabalhar com seniores com ternura.</div><div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">4.8 (89)</span></div><div class="price">5,90 €</div></div></div></div>
+    <div class="book-c"><div class="book-cover bk4">💖<span class="tag tag-sage" style="position:absolute;top:.8rem;right:.8rem">Novo</span></div><div class="book-info"><div class="book-cat">Crianças · 6–10 anos</div><div class="book-name">Emoções em Palavras</div><div class="book-desc">Atividades para trabalhar inteligência emocional e o vocabulário dos sentimentos com as crianças.</div><div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">4.9 (61)</span></div><div class="price">5,50 €</div></div></div></div>
+    <div class="book-c"><div class="book-cover bk5">🔢</div><div class="book-info"><div class="book-cat">Crianças · 5–8 anos</div><div class="book-name">Números e Diversão</div><div class="book-desc">Jogos matemáticos práticos para aprender a contar, somar e adorar os números com alegria.</div><div class="book-foot"><div><span class="stars">★★★★☆</span><span class="rating">4.7 (54)</span></div><div class="price">4,50 €</div></div></div></div>
+    <div class="book-c"><div class="book-cover bk6">🧩<span class="tag tag-rose" style="position:absolute;top:.8rem;right:.8rem">+ Vendido</span></div><div class="book-info"><div class="book-cat">Profissionais</div><div class="book-name">Kit do Educador</div><div class="book-desc">50 fichas prontas a usar em sala de aula ou em sessão terapêutica — poupe tempo, ganhe impacto.</div><div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">5.0 (112)</span></div><div class="price">12,90 €</div></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════════ KITS FÍSICOS ══════════════ -->
+<section id="kits">
+  <div class="eyebrow">Enviamos para a sua morada</div>
+  <div class="h2">Kits físicos <em>completos</em></div>
+  <p class="lead">Uma caixa cheia de surpresa, materiais e aprendizagem — entregue diretamente em sua casa. Tudo o que precisa para viver a atividade a fundo, com instruções claras e objetivos pedagógicos definidos.</p>
+
+  <div class="kits-feat">
+    <div class="kit-box-wrap">
+      <div class="kit-box">📦</div>
+      <div class="kit-float kf1"><span class="kf-ico">🚚</span>Entrega em 3–5 dias úteis</div>
+      <div class="kit-float kf2"><span class="kf-ico">🎁</span>Perfeito para oferecer</div>
+    </div>
+    <div>
+      <h3 style="font-family:'Cormorant',serif;font-size:1.9rem;font-weight:500;color:var(--ink);margin-bottom:1rem;line-height:1.2">O que inclui <em style="font-style:italic;color:var(--rose)">cada kit?</em></h3>
+      <div class="kit-includes">
+        <div class="ki"><div class="ki-ico ki-s">🎨</div><div class="ki-tx"><h4>Materiais de apoio à atividade</h4><p>Todos os materiais físicos necessários — tintas, papel especial, moldes, fichas impressas e mais — cuidadosamente selecionados para cada atividade.</p></div></div>
+        <div class="ki"><div class="ki-ico ki-r">📖</div><div class="ki-tx"><h4>Guia explicativo da atividade</h4><p>Instruções passo-a-passo claras e amorosas, com dicas de dinamização para diferentes contextos, idades e necessidades.</p></div></div>
+        <div class="ki"><div class="ki-ico ki-s">🎯</div><div class="ki-tx"><h4>Objetivos pedagógicos específicos</h4><p>Documento detalhado com competências desenvolvidas, faixas etárias recomendadas e indicadores de progresso para acompanhar cada criança.</p></div></div>
+        <div class="ki"><div class="ki-ico ki-r">💌</div><div class="ki-tx"><h4>Cartão de boas-vindas personalizado</h4><p>Uma mensagem especial para o destinatário — ideal quando o kit é oferecido como presente em datas especiais.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s-row" style="margin-top:4rem">
+    <div><div class="eyebrow">Escolha o seu kit</div><div class="h2">Kits por <em>tema</em></div></div>
+    <a href="#" class="more">Ver todos os kits →</a>
+  </div>
+  <div class="kits-g">
+    <div class="kit-c"><div class="kit-em">🎨</div><div class="kit-age">Crianças · 3–6 anos</div><div class="kit-name">Kit Expressão Plástica</div><div class="kit-d">Tintas, pincéis, esponjas e fichas criativas para explorar cor, forma e textura com liberdade e alegria.</div><div class="kit-p">18,90 €</div><div class="kit-gift-tag">🎂 Ideal para aniversário</div></div>
+    <div class="kit-c"><div class="kit-em">🌱</div><div class="kit-age">Família · Todas as idades</div><div class="kit-name">Kit Jardim em Casa</div><div class="kit-d">Sementes, terra, vasinhos e guia de crescimento — um projeto de família que cresce ao longo das semanas.</div><div class="kit-p">22,90 €</div><div class="kit-gift-tag">🎄 Ideal para Natal</div></div>
+    <div class="kit-c"><div class="kit-em">🍪</div><div class="kit-age">Crianças · 5–10 anos</div><div class="kit-name">Kit Culinária Infantil</div><div class="kit-d">Avental, formas, receitas ilustradas e ingredientes base — para cozinhar em segurança e com muita diversão.</div><div class="kit-p">24,90 €</div><div class="kit-gift-tag">🎉 Ideal para festas</div></div>
+    <div class="kit-c"><div class="kit-em">🧩</div><div class="kit-age">Seniores · 65+</div><div class="kit-name">Kit Memória Ativa</div><div class="kit-d">Jogos de memória, puzzles e atividades de estimulação cognitiva pensados com carinho para seniores.</div><div class="kit-p">19,90 €</div><div class="kit-gift-tag">🌸 Dia da Mãe/Pai</div></div>
+    <div class="kit-c"><div class="kit-em">✂️</div><div class="kit-age">Crianças · 6–12 anos</div><div class="kit-name">Kit Scrapbooking</div><div class="kit-d">Papéis decorados, autocolantes, washi tapes e fichas para criar um livro de memórias único e especial.</div><div class="kit-p">21,90 €</div><div class="kit-gift-tag">🎂 Ideal para aniversário</div></div>
+    <div class="kit-c"><div class="kit-em">🌙</div><div class="kit-age">Família · 4–99 anos</div><div class="kit-name">Kit Noite Estrela</div><div class="kit-d">Astronomia para fazer em família à noite — mapa estelar, luneta de papel e guia do cosmos ilustrado.</div><div class="kit-p">26,90 €</div><div class="kit-gift-tag">✨ Presente especial</div></div>
+  </div>
+</section>
+
+<!-- ══════════════ AULAS ONLINE ══════════════ -->
+<section id="aulas">
+  <div class="s-row">
+    <div><div class="eyebrow">Ao vivo · Gravadas · Workshops pontuais</div><div class="h2">Aulas online <em>lúdico-pedagógicas</em></div></div>
+    <a href="#" class="more">Ver calendário →</a>
+  </div>
+  <div class="aulas-g">
+    <div class="aula-c"><div class="aula-img ai1">🎨<span class="tag tag-sage" style="position:absolute;bottom:.75rem;left:.75rem">Pack Semanal</span></div><div class="aula-info"><div class="aula-mode">Expressão Plástica · 5–10 anos</div><div class="aula-name">Curso de Expressão Artística</div><div class="aula-desc">4 aulas semanais ao vivo — pintura, colagem, escultura e muito mais. Lista de materiais enviada antes de cada aula.</div><div class="aula-foot"><div class="aula-ses">📅 4 aulas · 45 min</div><div class="aula-p">39,90 €</div></div></div></div>
+    <div class="aula-c"><div class="aula-img ai2">🍰<span class="tag tag-sage" style="position:absolute;bottom:.75rem;left:.75rem">Pack Semanal</span></div><div class="aula-info"><div class="aula-mode">Culinária · Família</div><div class="aula-name">Cozinhar em Família</div><div class="aula-desc">4 aulas online para cozinhar receitas simples, divertidas e pedagógicas com crianças em segurança.</div><div class="aula-foot"><div class="aula-ses">📅 4 aulas · 60 min</div><div class="aula-p">44,90 €</div></div></div></div>
+    <div class="aula-c"><div class="aula-img ai3">🫧<span class="tag tag-rose" style="position:absolute;bottom:.75rem;left:.75rem">Workshop</span></div><div class="aula-info"><div class="aula-mode">Workshop Pontual · 4–12 anos</div><div class="aula-name">Slime & Experiências</div><div class="aula-desc">Workshop de 90 min — fazer slime, massinhas e experiências científicas com materiais caseiros simples.</div><div class="aula-foot"><div class="aula-ses">⚡ 1 sessão · 90 min</div><div class="aula-p">14,90 €</div></div></div></div>
+    <div class="aula-c"><div class="aula-img ai4">🧶<span class="tag tag-stone" style="position:absolute;bottom:.75rem;left:.75rem">Curso Curto</span></div><div class="aula-info"><div class="aula-mode">Trabalhos Manuais · 7–12 anos</div><div class="aula-name">Mini Costureiras & Tecelões</div><div class="aula-desc">3 aulas para aprender costura básica, tricot e tecelagem — criatividade e motricidade fina juntas.</div><div class="aula-foot"><div class="aula-ses">📅 3 aulas · 50 min</div><div class="aula-p">34,90 €</div></div></div></div>
+    <div class="aula-c"><div class="aula-img ai5">🌿<span class="tag tag-rose" style="position:absolute;bottom:.75rem;left:.75rem">Workshop</span></div><div class="aula-info"><div class="aula-mode">Workshop · Família</div><div class="aula-name">Jardim de Aromáticas</div><div class="aula-desc">Workshop de 2 horas — plantar, cuidar e conhecer plantas aromáticas com os mais pequenos em casa.</div><div class="aula-foot"><div class="aula-ses">⚡ 1 sessão · 120 min</div><div class="aula-p">17,90 €</div></div></div></div>
+    <div class="aula-c"><div class="aula-img ai6">📖<span class="tag tag-sage" style="position:absolute;bottom:.75rem;left:.75rem">Pack Semanal</span></div><div class="aula-info"><div class="aula-mode">Literacia · 5–8 anos</div><div class="aula-name">Histórias que Crescem</div><div class="aula-desc">4 aulas de criação de histórias com ilustração — imaginação, linguagem e expressão artística unidas.</div><div class="aula-foot"><div class="aula-ses">📅 4 aulas · 45 min</div><div class="aula-p">39,90 €</div></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════════ PRESENTES ══════════════ -->
+<section id="presentes">
+  <div class="eyebrow">A oferta perfeita</div>
+  <div class="h2">Presentes com <em>significado</em></div>
+  <p class="lead">Não há melhor presente do que uma experiência — pedagógica, criativa e cheia de amor. Para cada ocasião especial, a atividade certa.</p>
+  <div class="gifts-g" style="margin-top:2.5rem">
+    <div class="gift-c"><div class="gift-ico">🎂</div><div class="gift-occ">Aniversário</div><div class="gift-d">Kits personalizados com o nome da criança e atividades pensadas a pensar nos seus interesses e faixa etária.</div><div class="gift-cta">Ver kits de aniversário →</div></div>
+    <div class="gift-c"><div class="gift-ico">🎄</div><div class="gift-occ">Natal</div><div class="gift-d">Caixas temáticas de Natal com atividades de Inverno, receitas festivas e decoração para fazer em família.</div><div class="gift-cta">Ver kits de Natal →</div></div>
+    <div class="gift-c"><div class="gift-ico">🌸</div><div class="gift-occ">Dia da Mãe / Pai</div><div class="gift-d">Atividades para fazer juntos — projetos que criam memórias e fortalecem o laço especial entre pais e filhos.</div><div class="gift-cta">Ver kits de família →</div></div>
+    <div class="gift-c"><div class="gift-ico">🎓</div><div class="gift-occ">Fim de Ano Letivo</div><div class="gift-d">Packs pedagógicos para educadores oferecerem aos alunos — uma lembrança com propósito e muito carinho.</div><div class="gift-cta">Ver packs profissionais →</div></div>
+  </div>
+</section>
+
+<!-- ══════════════ QUEM SOU ══════════════ -->
+<section id="quem">
+  <div class="quem-g">
+    <div class="quem-ph">
+      <div class="quem-img">👩‍🏫</div>
+      <div class="quem-badge">
+        <p>Raquel Marinho</p>
+        <span>Educadora &amp; criadora de atividades pedagógicas</span>
+      </div>
+    </div>
+    <div class="quem-tx">
+      <div class="eyebrow">Quem sou</div>
+      <h2>Uma apaixonada por<br><em>aprender e ensinar</em></h2>
+      <p class="quem-p">Olá! Sou a Raquel, educadora de infância com mais de 10 anos de experiência e criadora do projeto Entre Folhas. Acredito profundamente que a aprendizagem mais poderosa acontece quando está envolta em brincadeira, criatividade e amor.</p>
+      <p class="quem-p">Criei a Entre Folhas porque queria chegar a mais famílias e profissionais — a toda a gente que, como eu, acredita que os momentos lúdicos e pedagógicos são dos mais importantes na vida de uma criança. E não só de crianças — também de seniores, famílias inteiras e de todos nós.</p>
+      <p class="quem-p">Cada e-book, cada kit e cada aula é criado com cuidado, rigor pedagógico e muita, muita alegria. Porque é assim que gosto de aprender e de ensinar — <em style="font-style:italic;color:var(--rose)">entre folhas</em>, entre risos e entre descobertas.</p>
+      <div class="quem-chips">
+        <div class="chip">🌿 Pedagógica</div>
+        <div class="chip">🎨 Criativa</div>
+        <div class="chip">💛 Com propósito</div>
+        <div class="chip">🧒 Para todas as idades</div>
+        <div class="chip">🇵🇹 Feita em Portugal</div>
+      </div>
+      <div class="btns">
+        <a href="#" class="btn btn-sage">Conhecer melhor</a>
+        <a href="#newsletter" class="btn btn-ghost">Subscrever newsletter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BLOG / COMUNIDADE ══════════════ -->
+<section id="blog">
+  <div class="s-row">
+    <div><div class="eyebrow">Comunidade Entre Folhas</div><div class="h2">Blog, partilhas <em>e inspiração</em></div></div>
+    <a href="#" class="more">Ver todos os posts →</a>
+  </div>
+  <div class="blog-g">
+    <div class="blog-c">
+      <div class="blog-img-wrap" style="height:220px">🌸</div>
+      <div class="blog-info">
+        <div class="blog-tag">Destaque</div>
+        <div class="blog-title">5 atividades sensoriais para fazer em casa com crianças de 2 a 4 anos</div>
+        <div class="blog-exc">Sem precisar de materiais especiais — apenas imaginação, amor e as coisas que já tem em casa. Um artigo cheio de ideias práticas para o fim de semana.</div>
+        <div class="blog-meta"><div class="bav">👩</div> Raquel Marinho · 12 Mai 2025</div>
+      </div>
+    </div>
+    <div class="blog-c">
+      <div class="blog-img-wrap" style="height:148px">🎨</div>
+      <div class="blog-info">
+        <div class="blog-tag">Trabalhos da comunidade</div>
+        <div class="blog-title">As vossas criações incríveis do Kit Expressão Plástica de Abril!</div>
+        <div class="blog-exc">Vejam o que as famílias criaram — estamos completamente apaixonadas com os resultados partilhados!</div>
+        <div class="blog-meta"><div class="bav">🌸</div> Comunidade · 8 Mai 2025</div>
+      </div>
+    </div>
+    <div class="blog-c">
+      <div class="blog-img-wrap" style="height:148px">🍰</div>
+      <div class="blog-info">
+        <div class="blog-tag">Aulas Online</div>
+        <div class="blog-title">O que aprendemos no workshop de culinária em família de Abril</div>
+        <div class="blog-exc">Um resumo fotográfico cheio de fofura do nosso workshop — pão, bolachas e muita alegria partilhada.</div>
+        <div class="blog-meta"><div class="bav">🍪</div> Raquel · 2 Mai 2025</div>
+      </div>
+    </div>
+  </div>
+  <div class="com-banner">
+    <div class="com-tx">
+      <h3>Partilhe a sua criação 🌿</h3>
+      <p>Comprou um kit ou participou numa aula? Envie-nos fotos dos trabalhos realizados — publicamos no blog e nas redes sociais. A comunidade Entre Folhas cresce com as vossas histórias e inspira novas famílias todos os dias!</p>
+    </div>
+    <a href="#" class="btn btn-wh">Partilhar trabalho →</a>
+  </div>
+</section>
+
+<!-- ══════════════ REVIEWS ══════════════ -->
+<section id="reviews" style="background:var(--white)">
+  <div class="eyebrow">O que dizem de nós</div>
+  <div class="h2">Famílias <em>reais,</em> histórias reais.</div>
+  <div class="rev-g" style="margin-top:2.5rem">
+    <div class="rev-c"><div class="r-stars">★★★★★</div><div class="r-tx">"Os meus filhos adoraram o kit de expressão plástica! Chegou numa caixa linda, com tudo organizado e uma cartinha da Raquel que derreteu o coração. Já encomendei mais dois kits."</div><div class="r-au"><div class="r-av">👩</div><div><div class="r-nm">Ana Rodrigues</div><div class="r-rl">Mãe de 2 crianças · Lisboa</div></div></div></div>
+    <div class="rev-c"><div class="r-stars">★★★★★</div><div class="r-tx">"Como educadora de infância, o Kit do Educador é um recurso extraordinário. Os objetivos pedagógicos estão tão bem definidos que me poupam horas de preparação. Obrigada, Raquel!"</div><div class="r-au"><div class="r-av">👩‍🏫</div><div><div class="r-nm">Margarida Costa</div><div class="r-rl">Educadora de Infância · Porto</div></div></div></div>
+    <div class="rev-c"><div class="r-stars">★★★★★</div><div class="r-tx">"Ofereci o kit de memória ativa aos meus pais — 70 anos — e foi um sucesso total. Ficaram tão entusiasmados que me pediram mais. Uma oferta com alma e muito propósito."</div><div class="r-au"><div class="r-av">👨</div><div><div class="r-nm">Ricardo Mendes</div><div class="r-rl">Filho preocupado · Braga</div></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════════ NEWSLETTER ══════════════ -->
+<section id="newsletter">
+  <div class="eyebrow">Fique a par das novidades</div>
+  <div class="h2">Receba atividades <em>grátis</em><br>na sua caixa de e-mail</div>
+  <p class="nl-sub">Subscreva e receba mensalmente 2 fichas de atividades gratuitas + antecipação de novos kits e aulas + ofertas exclusivas para subscritores de www.entrefolhas.pt</p>
+  <div class="nl-form">
+    <input class="nl-in" type="email" placeholder="O seu melhor e-mail...">
+    <button class="nl-btn">Subscrever</button>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="ft-g">
+    <div>
+      <!-- Logo versão dark -->
+      <svg width="180" height="52" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(8,36)">
+          <path d="M0,0 C6,-20 24,-30 34,-22 C44,-14 40,8 30,16 C20,24 2,20 0,0Z" fill="none" stroke="rgba(201,221,208,.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M0,0 C14,-3 28,2 34,-22" fill="none" stroke="rgba(201,221,208,.4)" stroke-width="0.7" stroke-linecap="round"/>
+          <path d="M12,-7 C18,-27 38,-38 48,-28 C58,-18 54,2 42,12 C32,21 13,18 12,-7Z" fill="none" stroke="rgba(237,213,206,.55)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <text x="65" y="24" font-family="Cormorant, Georgia, serif" font-size="20" font-style="italic" font-weight="400" fill="rgba(255,255,255,.8)" letter-spacing="0.01em">Entre</text>
+        <text x="65" y="45" font-family="Cormorant, Georgia, serif" font-size="20" font-weight="400" fill="rgba(255,255,255,.8)" letter-spacing="0.03em">Folhas</text>
+        <line x1="65" y1="49" x2="200" y2="49" stroke="rgba(196,129,111,.35)" stroke-width="0.6"/>
+        <text x="66" y="58" font-family="DM Sans, sans-serif" font-size="7" fill="rgba(255,255,255,.3)" letter-spacing="0.17em">Raquel Marinho  ·  Atividades Pedagógicas</text>
+      </svg>
+      <p class="ft-about">E-books, kits físicos e aulas online criados com amor e rigor pedagógico — para famílias, educadores e profissionais que querem fazer a diferença.</p>
+      <p class="ft-domain">www.entrefolhas.pt</p>
+    </div>
+    <div class="ft-col"><h4>Produtos</h4><ul><li><a href="#">E-books PDF</a></li><li><a href="#">Kits Físicos</a></li><li><a href="#">Aulas Online</a></li><li><a href="#">Workshops</a></li><li><a href="#">Packs Presentes</a></li></ul></div>
+    <div class="ft-col"><h4>Categorias</h4><ul><li><a href="#">Crianças</a></li><li><a href="#">Família</a></li><li><a href="#">Seniores</a></li><li><a href="#">Profissionais</a></li></ul></div>
+    <div class="ft-col"><h4>Informações</h4><ul><li><a href="#">Quem Sou</a></li><li><a href="#">Blog</a></li><li><a href="#">Contacto</a></li><li><a href="#">FAQ</a></li><li><a href="#">Política de Privacidade</a></li></ul></div>
+  </div>
+  <div class="ft-bot">
+    <p>© 2025 Entre Folhas · Raquel Marinho. Todos os direitos reservados.</p>
+    <p>Feito com 🌸 em Portugal · www.entrefolhas.pt</p>
+  </div>
+
+    <div style="margin-top:1rem;font-size:.85rem;color:rgba(255,255,255,.7)">
+      📧 geral.entrefolhas@gmail.com
+    </div>
+
+</footer>
+
+<script>
+  // Nav shadow on scroll
+  window.addEventListener('scroll',()=>{
+    document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40)
+  })
+  // Mobile menu
+  document.getElementById('burger').addEventListener('click',()=>{
+    document.getElementById('menu').classList.toggle('open')
+  })
+  // Close menu on link click
+  document.querySelectorAll('#menu a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open'))
+  })
+</script>
+</body>
+</html>
