@@ -186,6 +186,10 @@ section{padding:5.5rem 5%}
 .stars{color:var(--rose);letter-spacing:-2px;font-size:.82rem}
 .rating{font-size:.68rem;color:var(--ink-30);margin-left:.2rem}
 .price{font-size:.96rem;font-weight:500;color:var(--ink)}
+/* Sem preços por agora */
+.hc-price,.price,.kit-p,.aula-p{display:none!important}
+.book-foot{display:none!important}
+
 
 
 /* Capas reais dos e-books — todas com a mesma caixa visual da capa Família */
@@ -463,15 +467,6 @@ footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
   .cats-g,.grid-3,.aulas-g,.gifts-g,.kits-g,.rev-g{grid-template-columns:1fr}
   section{padding:4rem 5%}
 }
-
-/* Ajuste temporário: catálogo sem preços/rating */
-.price, .hc-price, .kit-p, .aula-p, .stars, .rating, .book-foot {
-  display: none !important;
-}
-.book-info {
-  padding-bottom: 1.35rem;
-}
-
 </style>
 </head>
 <body>
@@ -596,7 +591,7 @@ footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
 <section id="ebooks">
   <div class="s-row">
     <div>
-      <div class="eyebrow">Download imediato em PDF</div>
+      <div class="eyebrow">Catálogo digital</div>
       <div class="h2">E-books <em>pedagógicos</em></div>
       <p class="lead">Recursos prontos a usar, com atividades criativas, educativas e pensadas para famílias, crianças, seniores e profissionais.</p>
       <div class="contact-email-box">📧 Contacto: <strong>geral.entrefolhas@gmail.com</strong></div>
@@ -614,10 +609,8 @@ footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
         <div class="book-cat">Crianças · 3–6 anos</div>
         <div class="book-name">Cores, Formas e Muito Mais!</div>
         <div class="book-desc">40 fichas com pinturas, recortes e colagens para estimulação sensorial e criativa dos mais pequenos.</div>
-        <div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">4.9 (127)</span></div><div class="price">4,90 €</div></div>
         <div class="book-actions">
-          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Comprar%20e-book%20Cores%2C%20Formas%20e%20Muito%20Mais">Comprar</a>
-          <a class="btn btn-ghost" href="mailto:geral.entrefolhas@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20Cores%2C%20Formas%20e%20Muito%20Mais">Mais info</a>
+          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Pedido%20sobre%20Cores%2C%20Formas%20e%20Muito%20Mais">Pedir informações</a>
         </div>
       </div>
     </div>
@@ -631,10 +624,8 @@ footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
         <div class="book-cat">Família · Todas as idades</div>
         <div class="book-name">Aventuras em Família</div>
         <div class="book-desc">30 atividades para fazer juntos em casa ou ao ar livre, com materiais simples do quotidiano.</div>
-        <div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">5.0 (43)</span></div><div class="price">6,90 €</div></div>
         <div class="book-actions">
-          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Comprar%20e-book%20Aventuras%20em%20Fam%C3%ADlia">Comprar</a>
-          <a class="btn btn-ghost" href="mailto:geral.entrefolhas@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20Aventuras%20em%20Fam%C3%ADlia">Mais info</a>
+          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Pedido%20sobre%20Aventuras%20em%20Fam%C3%ADlia">Pedir informações</a>
         </div>
       </div>
     </div>
@@ -648,10 +639,8 @@ footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
         <div class="book-cat">Crianças · 6–10 anos</div>
         <div class="book-name">Emoções em Palavras</div>
         <div class="book-desc">Atividades para trabalhar inteligência emocional e o vocabulário dos sentimentos com as crianças.</div>
-        <div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">4.9 (61)</span></div><div class="price">5,50 €</div></div>
         <div class="book-actions">
-          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Comprar%20e-book%20Emo%C3%A7%C3%B5es%20em%20Palavras">Comprar</a>
-          <a class="btn btn-ghost" href="mailto:geral.entrefolhas@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20Emo%C3%A7%C3%B5es%20em%20Palavras">Mais info</a>
+          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Pedido%20sobre%20Emo%C3%A7%C3%B5es%20em%20Palavras">Pedir informações</a>
         </div>
       </div>
     </div>
@@ -664,10 +653,8 @@ footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
         <div class="book-cat">Crianças · 5–8 anos</div>
         <div class="book-name">Números e Diversão</div>
         <div class="book-desc">Jogos matemáticos práticos para aprender a contar, somar e adorar os números com alegria.</div>
-        <div class="book-foot"><div><span class="stars">★★★★☆</span><span class="rating">4.7 (54)</span></div><div class="price">4,50 €</div></div>
         <div class="book-actions">
-          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Comprar%20e-book%20N%C3%BAmeros%20e%20Divers%C3%A3o">Comprar</a>
-          <a class="btn btn-ghost" href="mailto:geral.entrefolhas@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20N%C3%BAmeros%20e%20Divers%C3%A3o">Mais info</a>
+          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Pedido%20sobre%20N%C3%BAmeros%20e%20Divers%C3%A3o">Pedir informações</a>
         </div>
       </div>
     </div>
@@ -680,10 +667,23 @@ footer{background:var(--ink);color:#fff;padding:4.5rem 5% 2rem}
         <div class="book-cat">Seniores · 65+</div>
         <div class="book-name">Memória Viva</div>
         <div class="book-desc">Exercícios de estimulação cognitiva suaves e amorosos para trabalhar com seniores com ternura.</div>
-        <div class="book-foot"><div><span class="stars">★★★★★</span><span class="rating">4.8 (89)</span></div><div class="price">5,90 €</div></div>
         <div class="book-actions">
-          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Comprar%20e-book%20Mem%C3%B3ria%20Viva">Comprar</a>
-          <a class="btn btn-ghost" href="mailto:geral.entrefolhas@gmail.com?subject=Informa%C3%A7%C3%B5es%20sobre%20Mem%C3%B3ria%20Viva">Mais info</a>
+          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Pedido%20sobre%20Mem%C3%B3ria%20Viva">Pedir informações</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-c">
+      <div class="book-cover real-cover">
+        <img src="images/kit-do-educador.png" alt="Capa do e-book Kit do Educador">
+        <span class="tag tag-sage" style="position:absolute;top:.8rem;right:.8rem">Educadores</span>
+      </div>
+      <div class="book-info">
+        <div class="book-cat">Profissionais · Educadores</div>
+        <div class="book-name">Kit do Educador</div>
+        <div class="book-desc">Recursos pedagógicos criativos para apoio educativo, desenvolvimento infantil e atividades práticas.</div>
+        <div class="book-actions">
+          <a class="btn btn-sage" href="mailto:geral.entrefolhas@gmail.com?subject=Pedido%20sobre%20Kit%20do%20Educador">Pedir informações</a>
         </div>
       </div>
     </div>
